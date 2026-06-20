@@ -19,6 +19,7 @@
   <a href="#structure">Structure</a> •
   <a href="#setup">Setup</a> •
   <a href="#deployment">Deployment</a> •
+  <a href="#preview">Preview</a> •
   <a href="#license">License</a> •
   <a href="#contact">Contact</a>
 </p>
