@@ -15,7 +15,15 @@
   --font-mono: 'JetBrains Mono', monospace;
 }
 
-html { scroll-behavior: smooth; }
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb { background: var(--cyan); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--violet-lt); }
+
+html { scroll-behavior: smooth; scrollbar-width: thin; scrollbar-color: var(--cyan) var(--bg); }
+
+::selection { background: rgba(0,255,204,0.2);}
+::-moz-selection { background: rgba(0,255,204,0.2);}
 
 body {
   background: var(--bg);
