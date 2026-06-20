@@ -1,0 +1,478 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RAJE_PANCHOLI — MERN · React Native · Cybersecurity</title>
+    <link rel="shortcut icon" href="logo3.ico" type="image/x-icon" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Scanline overlay -->
+    <div class="scanlines"></div>
+
+    <!-- Particle canvas -->
+    <canvas id="particles"></canvas>
+    <div class="grid-bg"></div>
+
+    <!-- NAV -->
+    <nav id="navbar">
+      <div class="nav-logo">
+        RAJE_PANCHOLI<span class="cursor-blink">_</span>
+      </div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="navToggle">☰</button>
+    </nav>
+
+    <!-- HERO -->
+    <section id="hero">
+      <div class="hero-content">
+        <p class="hero-eyebrow"><span class="mono">&gt; whoami</span></p>
+        <h1 class="hero-name">RAJE_</h1>
+        <div class="hero-roles">
+          <span class="mono role-prefix">// </span>
+          <span class="typed-text" id="typedText"></span>
+          <span class="typed-cursor">█</span>
+        </div>
+        <p class="hero-tagline">
+          Building scalable apps by day.<br />Breaking things (ethically) by
+          night.
+        </p>
+        <div class="hero-cta">
+          <a href="#projects" class="btn btn-primary">
+            <svg
+              xmlns="http://w3.org"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"
+              />
+              <path d="m10 11 2 2 4-4" />
+            </svg>
+            <span>View Projects</span>
+          </a>
+
+          <a href="#contact" class="btn btn-ghost">
+            <svg
+              xmlns="http://w3.org"
+              viewBox="0 0 24 24"
+              width="24"
+              height="24"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"
+              />
+            </svg>
+            <span>Get in Touch</span>
+          </a>
+        </div>
+      </div>
+      <div class="hero-terminal">
+        <div class="terminal-bar">
+          <span class="t-dot red"></span>
+          <span class="t-dot yellow"></span>
+          <span class="t-dot green"></span>
+          <span class="t-title">raje@dev ~ </span>
+        </div>
+        <div class="terminal-body" id="terminalBody"></div>
+      </div>
+      <div class="scroll-indicator">
+        <span class="mono">scroll</span>
+        <div class="scroll-line"></div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section id="about" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">about.md</p>
+        <h2 class="section-title reveal">
+          The Stack Behind<br /><em>the Signal</em>
+        </h2>
+        <div class="about-grid">
+          <div class="about-text reveal">
+            <p>
+              Hey, I'm <strong>Rajendra Pancholi</strong> — I build things for
+              the web and mobile, and when I'm not building, I'm usually trying
+              to break them.
+            </p>
+            <p>
+              I've been deep in the MERN stack for a while now. React Native for
+              cross-platform mobile. And on the side, security research — not as
+              a hobby, but as a mindset. Every API I write, every auth flow I
+              design, I'm already thinking about how someone would attack it.
+            </p>
+            <p>
+              Basically: I care too much about what I ship to not think about
+              what could go wrong.
+            </p>
+          </div>
+          <div class="about-cards">
+            <div class="about-card reveal" data-delay="0">
+              <div class="card-icon">⬡</div>
+              <h3>MERN Stack</h3>
+              <p>
+                Full-stack web engineering with MongoDB, Express, React &
+                Node.js at production scale.
+              </p>
+            </div>
+            <div class="about-card reveal" data-delay="100">
+              <div class="card-icon">◈</div>
+              <h3>React Native</h3>
+              <p>
+                Cross-platform mobile apps with native performance and seamless
+                UX for iOS & Android.
+              </p>
+            </div>
+            <div class="about-card reveal" data-delay="200">
+              <div class="card-icon">⬠</div>
+              <h3>Cybersecurity</h3>
+              <p>
+                Vulnerability research, penetration testing, and secure
+                architecture design.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SKILLS -->
+    <section id="skills" class="section section-dark">
+      <div class="container">
+        <p class="section-eyebrow reveal">tech.json</p>
+        <h2 class="section-title reveal">Tools of the<br /><em>Trade</em></h2>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h4 class="skill-group-title">
+              <span class="mono">[</span> Frontend <span class="mono">]</span>
+            </h4>
+            <div class="skill-tags">
+              <span class="tag">React.js</span>
+              <span class="tag">Next.js</span>
+              <span class="tag">React Native</span>
+              <span class="tag">TypeScript</span>
+              <span class="tag">Tailwind CSS</span>
+              <span class="tag">HTML & CSS</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-delay="100">
+            <h4 class="skill-group-title">
+              <span class="mono">[</span> Backend <span class="mono">]</span>
+            </h4>
+            <div class="skill-tags">
+              <span class="tag">Node.js</span>
+              <span class="tag">Express.js</span>
+              <span class="tag">Bun</span>
+              <span class="tag">Socket.io</span>
+              <span class="tag">REST APIs</span>
+              <span class="tag">JWT & Auth</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-delay="200">
+            <h4 class="skill-group-title">
+              <span class="mono">[</span> Data & DevOps
+              <span class="mono">]</span>
+            </h4>
+            <div class="skill-tags">
+              <span class="tag">MongoDB</span>
+              <span class="tag">MySQL</span>
+              <span class="tag">PostgreSQL</span>
+              <span class="tag">Redis</span>
+              <span class="tag">Docker</span>
+              <span class="tag">Git</span>
+            </div>
+          </div>
+          <div class="skill-group reveal" data-delay="300">
+            <h4 class="skill-group-title">
+              <span class="mono">[</span> Security <span class="mono">]</span>
+            </h4>
+            <div class="skill-tags">
+              <span class="tag tag-sec">Penetration Testing</span>
+              <span class="tag tag-sec">OWASP</span>
+              <span class="tag tag-sec">CTF</span>
+              <span class="tag tag-sec">Vulnerability Research</span>
+              <span class="tag tag-sec">Network Security</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section">
+      <div class="container">
+        <p class="section-eyebrow reveal">projects/</p>
+        <h2 class="section-title reveal">Selected<br /><em>Work</em></h2>
+        <div class="projects-grid">
+          <div class="project-card reveal" data-delay="0">
+            <div class="project-num mono">01</div>
+            <div class="project-content">
+              <div class="project-tags-top">
+                <span class="ptag">React Native</span>
+                <span class="ptag">Node.js</span>
+                <span class="ptag">MongoDB</span>
+                <span class="ptag">Socket.io</span>
+              </div>
+              <h3>RajeSync</h3>
+              <p class="project-sub">Appointment Scheduling System</p>
+              <p class="project-desc">
+                A React Native mobile app that simplifies booking appointments
+                with service providers. JWT auth with Redis blacklist, real-time
+                slot management, and a seamless cross-platform experience.
+              </p>
+              <a
+                href="https://expo.dev/artifacts/eas/sM3TvJUn8gwraF1qvTfjxT.apk"
+                class="project-link"
+                target="_blank"
+                >View APK <span>→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-delay="100">
+            <div class="project-num mono">02</div>
+            <div class="project-content">
+              <div class="project-tags-top">
+                <span class="ptag">Next.js</span>
+                <span class="ptag">TypeScript</span>
+                <span class="ptag">MySQL</span>
+                <span class="ptag">Tailwind</span>
+              </div>
+              <h3>Golfying</h3>
+              <p class="project-sub">Play. Give. Win.</p>
+              <p class="project-desc">
+                High-performance web app blending golf score tracking with
+                charity support. Players log Stableford scores to enter prize
+                draws while supporting causes they care about.
+              </p>
+              <a
+                href="https://golfying.vercel.app"
+                class="project-link"
+                target="_blank"
+                >Live Site <span>→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-delay="200">
+            <div class="project-num mono">03</div>
+            <div class="project-content">
+              <div class="project-tags-top">
+                <span class="ptag">React</span>
+                <span class="ptag">TypeScript</span>
+                <span class="ptag">Vite</span>
+              </div>
+              <h3>Server Side Selectable Grid</h3>
+              <p class="project-sub">Cross-Page State Persistence</p>
+              <p class="project-desc">
+                A high-performance React component solving cross-page state
+                persistence with custom hooks for server-side pagination —
+                handling massive datasets without UI lag.
+              </p>
+              <a
+                href="https://luminous-taffy-8c74c7.netlify.app/"
+                class="project-link"
+                target="_blank"
+                >Live Demo <span>→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-delay="300">
+            <div class="project-num mono">04</div>
+            <div class="project-content">
+              <div class="project-tags-top">
+                <span class="ptag">Next.js</span>
+                <span class="ptag">Python</span>
+                <span class="ptag">MySQL</span>
+                <span class="ptag">AI</span>
+              </div>
+              <h3>AI Support Chatbot</h3>
+              <p class="project-sub">Intelligent Customer Assistance</p>
+              <p class="project-desc">
+                An AI-powered customer support chatbot delivering instant,
+                personalized assistance. Automates responses, resolves queries
+                efficiently, with 24/7 intelligent conversational support.
+              </p>
+              <a
+                href="https://rajendrapancholi.vercel.app/"
+                class="project-link"
+                target="_blank"
+                >View Project <span>→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="project-card reveal" data-delay="400">
+            <div class="project-num mono">05</div>
+            <div class="project-content">
+              <div class="project-tags-top">
+                <span class="ptag">MERN Stack</span>
+                <span class="ptag">MongoDB</span>
+              </div>
+              <h3>BookBary</h3>
+              <p class="project-sub">Smart Library Management System</p>
+              <p class="project-desc">
+                A smart library management system simplifying book tracking,
+                borrowing, and returns. Streamlines library operations with an
+                intuitive interface for students, librarians, and admins.
+              </p>
+              <a
+                href="https://rajendrapancholi.vercel.app/"
+                class="project-link"
+                target="_blank"
+                >View Project <span>→</span></a
+              >
+            </div>
+          </div>
+
+          <div class="project-card project-card-cta reveal" data-delay="500">
+            <div class="cta-inner">
+              <p class="mono">&gt; more_projects.sh</p>
+              <h3>Want to see more?</h3>
+              <p>
+                Check the full portfolio for additional projects and open source
+                work.
+              </p>
+              <a
+                href="https://rajendrapancholi.vercel.app/"
+                class="btn btn-primary"
+                target="_blank"
+                >Full Portfolio</a
+              >
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact" class="section section-dark">
+      <div class="container contact-container">
+        <p class="section-eyebrow reveal">contact.sh</p>
+        <h2 class="section-title reveal">
+          Let's Build<br /><em>Something.</em>
+        </h2>
+        <p class="contact-sub reveal">
+          Have a project in mind, a security audit needed, or just want to talk
+          tech? I'm one message away.
+        </p>
+        <div class="contact-actions reveal">
+          <a
+            href="mailto:rpancholi522@gmail.com"
+            class="btn btn-primary magnetic"
+          >
+            <svg
+              xmlns="http://w3.org"
+              viewBox="0 0 24 24"
+              width="40"
+              height="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <rect x="2" y="4" width="20" height="16" rx="2" />
+              <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
+            </svg>
+            <span>Send Email</span>
+          </a>
+
+          <a
+            href="https://github.com/rajendrapancholi"
+            class="btn btn-ghost magnetic"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://w3.org"
+              viewBox="0 0 24 24"
+              width="40"
+              height="40"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+            >
+              <path
+                d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.40-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"
+              />
+              <path d="M9 18c-4.51 2-5-2-7-2" />
+            </svg>
+            <span>GitHub</span>
+          </a>
+
+          <a
+            href="https://www.linkedin.com/in/rajendra-pancholi"
+            class="btn btn-ghost magnetic"
+            target="_blank"
+          >
+            <svg
+              xmlns="http://w3.org"
+              viewBox="0 0 24 24"
+              width="40"
+              height="40"
+              fill="none"
+            >
+              <rect
+                class="bg"
+                x="2"
+                y="2"
+                width="20"
+                height="20"
+                rx="4"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+              />
+              <path
+                class="logo-text"
+                d="M9 17H6.5V9.5H9V17ZM7.75 8.35C6.95 8.35 6.3 7.7 6.3 6.9C6.3 6.1 6.9 5.45 7.75 5.45C8.55 5.45 9.2 6.1 9.2 6.9C9.2 7.7 8.55 8.35 7.75 8.35ZM17.5 17H15V13.1C15 12.15 14.65 11.55 13.8 11.55C13.15 11.55 12.75 12 12.6 12.4C12.55 12.55 12.55 12.75 12.55 12.95V17H10V9.5H12.55V10.55C12.9 10 13.65 9.3 14.9 9.3C16.6 9.3 17.5 10.4 17.5 12.75V17Z"
+                fill="currentColor"
+              />
+            </svg>
+            <span>LinkedIn</span>
+          </a>
+        </div>
+        <div class="contact-status reveal">
+          <span class="status-dot"></span>
+          <span class="mono">Available for freelance & collaboration</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+      <div class="container footer-inner">
+        <span class="mono footer-name">RAJE_PANCHOLI</span>
+        <span class="mono footer-copy"></span>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
